@@ -1,0 +1,14 @@
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.exe
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.deps.json
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.json
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.dev.json
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.dll
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Test.pdb
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Speedlimits.dll
+C:\Users\maro\RiderProjects\Speedlimits\Test\bin\Debug\netcoreapp3.0\Speedlimits.pdb
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.csprojAssemblyReference.cache
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfoInputs.cache
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfo.cs
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.csproj.CopyComplete
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.dll
+C:\Users\maro\RiderProjects\Speedlimits\Test\obj\Debug\netcoreapp3.0\Test.pdb

@@ -1,0 +1,8 @@
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\bin\Debug\netstandard2.0\Speedlimits.deps.json
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\bin\Debug\netstandard2.0\Speedlimits.dll
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\bin\Debug\netstandard2.0\Speedlimits.pdb
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\obj\Debug\netstandard2.0\Speedlimits.csprojAssemblyReference.cache
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\obj\Debug\netstandard2.0\Speedlimits.AssemblyInfoInputs.cache
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\obj\Debug\netstandard2.0\Speedlimits.AssemblyInfo.cs
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\obj\Debug\netstandard2.0\Speedlimits.dll
+C:\Users\maro\RiderProjects\Speedlimits\Speedlimits\obj\Debug\netstandard2.0\Speedlimits.pdb

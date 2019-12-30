@@ -9,11 +9,12 @@ namespace Speedlimits
     /// <summary>
     /// A basic rate-limiter. Limit your 
     /// </summary>
-    public class Speedlimit
+    public class RateLimiter
     {
         private readonly ConcurrentQueue<TaskCompletionSource<bool>> _queue = new ConcurrentQueue<TaskCompletionSource<bool>>();
-        private int _maximum;
+        private int _capacity;
         private TimeSpan _timeSpan;
+        private DateTime _nextRefill;
         
         private volatile int _overhead;
         private readonly object _lock = new object();
@@ -21,12 +22,12 @@ namespace Speedlimits
         /// <summary>
         /// Creates a Speedlimit instance that will only allow a number of calls to Obey to resolve over a certain period of time
         /// </summary>
-        /// <param name="maximumCalls">The maximum amount of calls</param>
+        /// <param name="capacityCalls">The maximum amount of calls</param>
         /// <param name="timeSpan">The period of time</param>
-        public Speedlimit(int maximumCalls, TimeSpan timeSpan)
+        public RateLimiter(int capacityCalls, TimeSpan timeSpan)
         {
-            _maximum = maximumCalls;
-            _overhead = maximumCalls;
+            _capacity = capacityCalls;
+            _overhead = capacityCalls;
             _timeSpan = timeSpan;
             Patrol();
         }
@@ -37,7 +38,7 @@ namespace Speedlimits
             {
                 await Task.Delay(_timeSpan);
 
-                var newCalls = _maximum;
+                var newCalls = _capacity;
                 var queued = new List<TaskCompletionSource<bool>>(4);
                 lock (_lock)
                 {
@@ -60,13 +61,18 @@ namespace Speedlimits
         /// <summary>
         /// Obey the speedlimit asynchronously
         /// </summary>
-        public Task ObeyAsync()
+        public Task WaitAsync()
         {
             var tcs = new TaskCompletionSource<bool>();
 
             var go = false;
             lock (_lock)
             {
+                if (DateTime.UtcNow > _nextRefill)
+                {
+                    
+                    _nextRefill = DateTime.UtcNow.Add(_timeSpan);
+                }
                 if (_overhead > 0)
                 {
                     _overhead--;
@@ -83,9 +89,9 @@ namespace Speedlimits
         /// <summary>
         /// Obey the speedlimit synchronously
         /// </summary>
-        public void Obey()
+        public void Wait()
         {
-            ObeyAsync().Wait();
+            WaitAsync().Wait();
         }
     }
 }
